@@ -28,3 +28,11 @@ const schema = z.object({
   password: z.string().min(8),
   country: z.enum(["IN", "US"]), //.literal or .number or .string
 });
+
+
+Authentication --> 
+
+slightly better way 
+1. give the user back a token on signup/signin 
+2. Ask the user to send back the token in every future request 
+3. When the user logs out ask the user to forget the token ( or revoke the token from the backend )
